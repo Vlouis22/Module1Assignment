@@ -59,7 +59,7 @@ class Teacher(Person):
         self.courses = courses
 
     def __str__(self):
-        return "Hi,  my name is Dr." + self.getName() + ", I am a professor here at DSU."
+        return "Hi, my name is Dr." + self.getName() + ", I am a professor here at DSU."
     
     def addCourse(self, courseName):
         if courseName not in self.courses:
@@ -135,8 +135,11 @@ professor1.removeCourse("English")
 print(professor1)
 print()
 
-course1 = Course(courseName='introduction_to_cpp', professor="Dr. Smolinski", students=["Valery", "Jeffrey", "Matt"])
-course1.addStudent("Josephine")
+
+studentValery = Student("Valery", "539 blue street wy", 4, ["Introduction to c++"], [95])
+studentTom = Student("Tom", "220 Peachtree run, Dover, DE", 4, ["Introduction to c++"], [80])
+studentKlay = Student("Klay", "935 queensland st, Queens", 4, ["Introduction to c++", "Algebra 1"], [92, 80])
+course1 = Course(courseName='introduction_to_cpp', professor="Dr. Smolinski", students=[studentValery, studentTom, studentKlay])
 print(course1)
 print()
 
